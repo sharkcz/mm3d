@@ -140,7 +140,7 @@ void ContextInfluences::modelChanged( int changeBits )
             {
                int bone = (*iit).m_boneId;
                m_jclist[ bone ].count  += 1;
-               m_jclist[ bone ].weight += (int) ((*iit).m_weight * 100.0);
+               m_jclist[ bone ].weight += (int) round( (*iit).m_weight * 100.0 );
                m_jclist[ bone ].typeCount[ (*iit).m_type ] += 1;
             }
          }
